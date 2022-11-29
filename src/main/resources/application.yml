@@ -1,0 +1,30 @@
+spring:
+  servlet.multipart:
+    enabled: true
+    file-size-threshold: 2KB
+    max-file-size: 200MB
+    max-request-size: 215MB
+  mvc:
+    pathmatch.matching-strategy: ANT_PATH_MATCHER
+
+configuration:
+  path: conf/config.json
+  keyStorePassword: password
+  trustStorePassword: password
+  keyAlias: 1
+
+daps:
+  mode: aisec
+  token.url: https://daps.aisec.fraunhofer.de/v2/token
+
+sparql.url: http://localhost:3030/connectorData
+
+component:
+  uri: http://localhost:8080/
+  maintainer: https://www.iais.fraunhofer.de
+  modelversion: 4.0.3
+  catalogUri: http://localhost:8080/connectors/
+  responseSenderAgent: https://www.iais.fraunhofer.de
+
+logging.level:
+    de.fraunhofer: DEBUG

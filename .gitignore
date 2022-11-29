@@ -1,0 +1,35 @@
+# intellij
+.idea
+**/*.iml
+.classpath
+.project
+.settings/
+**/.flattened-pom.xml
+
+# java backend
+target/
+**/*.jar
+
+# react frontend
+searchfrontend/node_modules
+searchfrontend/build
+docker/searchfrontend/build/
+searchfrontend/package-lock.json
+searchfrontend/searchfrontend
+
+# mongodb Backend
+mongodb-handler/node_modules
+mongodb-handler/.dockerignore
+mongodb-handler/db
+mongodb-handler/package-lock.json
+
+# logs
+logs/
+
+#Temporary env file
+searchfrontend/public/env-config.js
+searchfrontend/env-config.js
+
+docker/package-lock.json
+
+docker/composefiles/ParIS/paris-localhost/paris-db
