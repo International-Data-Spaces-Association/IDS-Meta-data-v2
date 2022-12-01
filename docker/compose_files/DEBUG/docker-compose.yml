@@ -1,0 +1,35 @@
+version: '2'
+services:
+
+  broker-fuseki:
+    image: registry.gitlab.cc-asp.fraunhofer.de/eis-ids/broker/fuseki
+    environment:
+    - ADMIN_PASSWORD=test
+    ports:
+    - "3030:3030"
+    volumes:
+      - broker-fuseki:/fuseki
+    expose:
+    - "3030"
+
+  broker-elasticsearch:
+    image: elasticsearch:7.16.2
+    environment:
+    - http.port=9200
+    - http.cors.enabled=true
+    - http.cors.allow-origin=https://localhost
+    - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+    - http.cors.allow-credentials=true
+    - discovery.type=single-node
+    volumes:
+    - broker-esdata:/usr/share/elasticsearch/data
+    expose:
+    - "9200"
+    #Only for debugging locally! This port should not be exposed in a proper dockerized environment!
+    ports:
+    - "9200:9200"
+
+
+volumes:
+    broker-fuseki:
+    broker-esdata:

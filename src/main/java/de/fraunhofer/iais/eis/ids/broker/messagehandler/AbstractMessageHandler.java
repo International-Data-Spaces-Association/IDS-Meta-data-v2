@@ -36,7 +36,6 @@ public abstract class AbstractMessageHandler<T extends Message> implements Messa
 
     @Override
     public MessageResponse handleMessage(T queryHeader, MessagePayload payload) {
-        log.debug("Handle message: {}", queryHeader);
         var payloadText = readPayload(payload);
         return handleMessage(queryHeader, payloadText);
     }
