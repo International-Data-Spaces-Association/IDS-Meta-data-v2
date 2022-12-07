@@ -322,7 +322,7 @@ public class AbstractBrokerTest {
             "	\"ids\" : \"https://w3id.org/idsa/core/\"," +
             "	\"idsc\" : \"https://w3id.org/idsa/code/\"" +
             "  }," +
-            "	  \"@type\" : \"ids:DataResource\"," +
+            "	  \"@type\" : \"ids:Resource\"," +
             "	  \"@id\" : \"https://w3id.org/idsa/autogen/dataResource/afaafe22-fb63-4532-a1e1-15230cb99444\"," +
             "	  \"ids:representation\" : [ {" +
             "		\"@type\" : \"ids:DataRepresentation\"," +
@@ -380,7 +380,7 @@ public class AbstractBrokerTest {
             "	\"ids\" : \"https://w3id.org/idsa/core/\"," +
             "	\"idsc\" : \"https://w3id.org/idsa/code/\"" +
             "  }," +
-            "  \"@type\" : \"ConnectorUnavailableMessage\"," +
+            "  \"@type\" : \"ids:ConnectorUnavailableMessage\"," +
             "  \"@id\" : \"https://w3id.org/idsa/autogen/cfea-4aad-979c-3515c2e71967\"," +
             "  \"ids:affectedConnector\" : {" +
             "	\"@id\":\"https://test.connector.de/\"," +
@@ -403,7 +403,7 @@ public class AbstractBrokerTest {
             "  }," +
             "  \"ids:issued\" : {" +
             "	\"@value\" : \"2021-06-05T17:27:23.566+02:00\"," +
-            "	\"@type\" : \"http://www.w3.org/2001/XMLSchema%23dateTimeStamp\"" +
+            "	\"@type\" : \"http://www.w3.org/2001/XMLSchema#dateTimeStamp\"" +
             "  }" +
             "}";
 

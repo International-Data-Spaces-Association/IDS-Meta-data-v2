@@ -13,7 +13,7 @@
 
     <properties>
         <revision>5.0.0-RELEASECANDIDATE</revision>
-        <ids.messaging.version>5.0.3-SNAPSHOT</ids.messaging.version>
+        <ids.messaging.version>8.0.0</ids.messaging.version>
         <ids.broker.version>5.0.3</ids.broker.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -86,28 +86,28 @@
                     </plugin>
 
                     <!-- Code Coverage report plugin -->
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.8.6</version>
-                        <executions>
-                            <!--first execution : for preparing JaCoCo runtime agent-->
-                            <execution>
-                                <id>prepare-agent</id>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                            <!--second execution : for creating code coverage reports-->
-                            <execution>
-                                <id>report</id>
-                                <phase>test</phase>
-                                <goals>
-                                    <goal>report</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.jacoco</groupId>-->
+<!--                        <artifactId>jacoco-maven-plugin</artifactId>-->
+<!--                        <version>0.8.6</version>-->
+<!--                        <executions>-->
+<!--                            &lt;!&ndash;first execution : for preparing JaCoCo runtime agent&ndash;&gt;-->
+<!--                            <execution>-->
+<!--                                <id>prepare-agent</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>prepare-agent</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                            &lt;!&ndash;second execution : for creating code coverage reports&ndash;&gt;-->
+<!--                            <execution>-->
+<!--                                <id>report</id>-->
+<!--                                <phase>test</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>report</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
